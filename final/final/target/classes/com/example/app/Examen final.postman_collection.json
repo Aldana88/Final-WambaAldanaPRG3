@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "1cffd3b4-5d70-44b6-b30b-d821f6933b5f",
+    "name": "Examen final",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56463174",
+    "_collection_link": "https://go.postman.co/collection/56463174-1cffd3b4-5d70-44b6-b30b-d821f6933b5f?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "prestamo/prestar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "prestamo/devolver",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"codigoMaterial\": \"L001\",\r\n  \"idSocio\": 2,\r\n  \"diasAtraso\": 3,\r\n  \"tipoEstrategia\": \"CAMPANIA\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/prestamos/devolver",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "prestamos",
+            "devolver"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "materiales/disponibles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/materiales/disponibles",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "materiales",
+            "disponibles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "depurar-duplicados",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n  \"11111111\",\r\n  \"22222222\",\r\n  \"11111111\",\r\n  \"33333333\",\r\n  \"22222222\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/socios/depurar-duplicados",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "socios",
+            "depurar-duplicados"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
